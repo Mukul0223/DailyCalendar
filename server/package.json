@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "supabase": "2.122.0"
+  },
+  "dependencies": {
+    "express": "5.3.0"
   }
 }
