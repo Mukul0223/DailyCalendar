@@ -1,9 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Documents backend API endpoints, database setup, environment variables, and server deployment instructions.",
-  "main": "index.js",
+  "description": "Express.js backend server for the DailyCalendar application",
+  "main": "src/server.js",
   "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
