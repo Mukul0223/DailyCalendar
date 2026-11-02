@@ -1,9 +1,9 @@
 import app from "./app.js";
-const PORT = 8080;
+import config from "./config/index.js";
 
 const startServer = async () => {
-  app.listen(PORT, () => {
-    console.log(`Server running on port: ${PORT}`);
+  app.listen(config.port, () => {
+    console.log(`Server is running on port: ${config.port}`);
   });
 };
 
