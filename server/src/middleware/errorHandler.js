@@ -1,6 +1,10 @@
 import ApiError from "../utils/ApiError.js";
 
 export const errorHandler = (err, req, res, next) => {
+  if (res.headersSent) {
+    return next(err);
+  }
+
   let normalizedError = err;
 
   if (err.type === "entity.parse.failed") {
@@ -20,7 +24,6 @@ export const errorHandler = (err, req, res, next) => {
   }
 
   res.status(statusCode).json({
-    statusCode,
     message,
     ...(details && { details }),
   });
